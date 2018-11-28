@@ -3,7 +3,7 @@
 // Define element values via data attributes
 // On load, all defined values will be collected to form a potential score
 // As the user clicks on different elements, their score will be totalled
-// When the user leaves the page, the score is added as a custom metric to Google Analytics
+// When the user leaves the page, the score is passed to Google Analytics as an event value
 
 var pes = {} || null;
 
@@ -64,7 +64,7 @@ pes = {
     if (window.location.search) {
       pageUrl = pageUrl + window.location.search;
     }
-    console.log(pageUrl);
+
     // category, action, label, value
     ga('send', 'event', pes.ga.eventCategoryName, pes.ga.eventActionName, pageUrl, pes.score.metric);
 
@@ -101,7 +101,7 @@ pes = {
     // add click events to all elements we want to score
     $.each(pes.elements, function(index, value) {
       
-      $( '#' + value.id ).on( "click", function(event) {
+      $('#' + value.id).on( "click", function(event) {
         
         var elementId = $(this).attr('id');
         var elementScore = $(this).data(pes.dataAttributeName);
