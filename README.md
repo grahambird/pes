@@ -24,9 +24,11 @@ The score is always out of 100, no matter how many elements you add. You can giv
   
 ## Example HTML
 
+```
 <a href="#" data-pes-value="10">Something trivial</a>
 
 <a href="#" data-pes-value="200">Something really important</a>
+```
 
 ## GDPR?
 
