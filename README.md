@@ -36,7 +36,19 @@ It collects no personal data.
 
 ## Finding the data in Google Analytics
 
-Go to the Events reports. 
+Go to the Events reports.
+
+## Customisation
+
+A few things can be changed in the pes.js file:
+
+* the name of the data attribute that tracks the scores
+* the Google Analytics event category name
+* the Google Analytics event action name
+
+## Debug mode
+
+Enable pes.debug = true to see the score live and send the event to Google Analytics without leaving the page.
 
 ## Limitations
 
