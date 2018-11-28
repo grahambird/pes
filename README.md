@@ -15,22 +15,26 @@ JQuery
 * If the user clicks the same element twice, the score does not increase
 * When the user leaves the page, it sends a calculated score out of 100 to Google Analytics
 
-## GDPR?
-
-It collects no personal data.
-
-## How it works
-
-
-
 ## How to use
 
 1. Include pes.js in your page via a <script> tag.
 2. Add a data-pes-value data attribute to any element you want to measure.
 
-<a href="#" data-pes-value="10">Something to click</a>
+The score is always out of 100, no matter how many elements you add. You can give different elements different weights by increasing or decreasing the score in the data attribute.
+  
+## Example HTML
+
+<a href="#" data-pes-value="10">Something trivial</a>
+
+<a href="#" data-pes-value="200">Something really important</a>
+
+## GDPR?
+
+It collects no personal data.
 
 ## Finding the data in Google Analytics
+
+Go to the Events reports. 
 
 ## Limitations
 
