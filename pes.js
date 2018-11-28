@@ -3,7 +3,7 @@
 // Define element values via data attributes
 // On load, all defined values will be collected to form a potential score
 // As the user clicks on different elements, their score will be totalled
-// When the user leaves the page, the score is passed to Google Analytics as an event value
+// When the user leaves the page, the score is added as a custom metric to Google Analytics
 
 var pes = {} || null;
 
@@ -63,6 +63,10 @@ pes = {
     var pageUrl = window.location.pathname;
     if (window.location.search) {
       pageUrl = pageUrl + window.location.search;
+    }
+    
+    if (pes.debug) {
+      console.log('Recording score of ' + pes.score.metric);
     }
 
     // category, action, label, value
