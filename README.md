@@ -36,7 +36,7 @@ It collects no personal data.
 
 ## Finding the data in Google Analytics
 
-Go to the Events reports.
+Go to the Events reports. Choose Page Engagement Score from the event categories. Switch to the Event label Dimension to see the pages being tracked and their average score (under the Avg. Value column).
 
 ## Customisation
 
@@ -54,3 +54,7 @@ Enable pes.debug = true to see the score live and send the event to Google Analy
 
 * It only tracks DOM elements via the onclick event.
 * There is no support for tracking clicks on embedded content like videos.
+
+## Contributions
+
+Improvements welcome!
